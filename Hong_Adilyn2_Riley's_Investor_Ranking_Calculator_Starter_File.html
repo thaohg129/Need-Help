@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//
+// Please review the directions for the program (below).  This will explain what the program is
+// supposed to do.  While much of the program has been provided, some parts of the program are 
+// missing.  The missing parts are indicated with question marks ("�").  Your goal is to update
+// the program by replacing all of the question marks with code which will make the program 
+// function properly.
+//
+// Riley certainly found some great investors! These investors have vision and they have the
+// financial resources to make a difference. Some of Riley's investors are very problematic from a risk perspective!
+// Too often these problematic investors are excited about Riley's business 
+// but simply don't have the financial resources to be a serious investor.  Some of 
+// them simply don't have enough assets. Some of them just have too much debt. While others 
+// don't have enough income. There may even be investors with both debt and income issues.  
+//
+// Riley determined that she needs a tool to qualify these investors. This tool needs to determine if they 
+// have enough of the financial resources to be a serious investor.  The requirements Riley identified include 
+// the following: Investors must have enough assets; Investors will need to have low enough debt; Investors will
+// need to have income to be a serious investor.  Riley would like you to develop this tool.  
+//
+// This program will be similar to the other programs you have written for this class, the main program and the
+// function declarations are provided.  Your job will be to write the code inside 
+// the functions to solve the problem (you will need to write three functions).
+// These three functions are:
+//
+//		totalAssets() - The totalAssets() function will not be passed any parameters. It
+//			will prompt the user for the number of assets that the user has (i.e. bank
+//			accounts, investment accounts, etc.) and will then use a "for" loop to prompt
+//			the user for the value of each of these assets and will keep a running 
+//			total of these assets.  The function will return the total value of all assets.
+//          The loop should continue for the amount of assets the user identifies.
+//
+//		totalDebt() - The totalDebt() function will not be passed any parameters.  Unlike
+//			the totalAssets() function, totalDebt() will not use a "for" loop.
+//          totalDebt() will use a while loop. totalDebt() will prompt the user for the value of 
+//          each debt the user has and will continue asking for the value of the next debt until
+//          the user enters a value of "0".  totalDebt() will keep a running total of debt and when
+//          the user enters a debt of "0" the function will return the total debt.
+//
+//		calculateInvestorRanking(investmentAmount, annualIncome, assets, debts) - calculateInvestorRanking()
+//			is passed four parameters.  These four parameters are:
+//				investmentAmount - Represents the amount of the proposed investment.  For smaller
+//					investment, the investor will not need the same type of finanacial resources
+//					as for larger investments.  This has been provided in the main program.
+//				annualIncome -  Represents the annual income of the prospective investor. This
+//					has been provided in the main program.  
+//				assets - The total assets of the prospective investor.  This is returned by the 
+//					totalAssets() function.  
+//				debts - The total debts of the prospective investor.  This is returned by the 
+//					totalDebt() function.  
+//			Using these four pieces of information, calculateInvestorRanking will return an "investor 
+//			score" based on the following rules:
+//				1) If the prospective investor's debts are greater than their assets then the investor 
+//					score is 0 because this investor is clearly broke.
+//				2) If the difference between the investor's assets and the investor's debts (assets-debts)  
+//					is less than the investment amount then the investor score is 0 because, while this investor 
+//					isn't broke, they clearly don't have the financial assets to make this kind of investment.
+//				3) After subtracting debts and the proposed investment from assets, the investor   
+//					needs money to live on.  If the balance of their assets 
+//					(total assets - total debts - proposed investment) is greater than annual income, the investor score would 
+// 					be (total assets - total debts - proposed investment).
+//
+
+function totalAssets() {
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the next comment block.  Do not alter     //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+let assetIdentified = parseInt(prompt('How many assets does this investor have?'));
+//
+//NOTE FOR STUDENTS: when you run the program in the browser, you do not have to test it with a lot of assets. Try it with 2 assets and then with 3 or 4. 
+//This is to make sure that the function works and can take multiple assets. You do not have to put 100s of assets in - just make sure it works with a few.
+//
+
+let totalValueOfAssets = 0;
+
+for (�) {
+	
+	let individualAssetValue =  parseFloat(prompt('What is the value of asset '+ assetCounted + '?'));
+	totalValueOfAssets = � + �; 
+	}
+	return �;
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the previous comment block.  Do not alter //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+}
+
+
+function totalDebt() {
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the next comment block.  Do not alter     //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+let totalValueOfDebt = 0
+let debtCounted = 1
+let individualDebtValue = parseInt(prompt('What is the value of debt '+ debtCounted++ +'?'));
+
+while (�) {
+	totalValueOfDebt = � + �
+	individualDebtValue = parseInt(prompt('What is the value of debt '+ debtCounted++ +'?'));
+}
+return �
+
+	
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the previous comment block.  Do not alter //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+}
+
+function calculateInvestorRanking(investmentAmount, annualIncome, assets, debts) {
+
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the next comment block.  Do not alter     //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+let investmentRanking
+
+if (�) {
+	investmentRanking = "0. This investor is clearly broke!"
+}
+else if (�) {
+	investmentRanking = "0. They clearly don't have the financial assets to make this kind of investment!"
+}
+else if (�) {
+	investmentRanking = (assets - debts - investmentAmount)
+}
+else {
+	investmentRanking = annualIncome;
+}
+
+return �
+	
+/////////////////////////////////////////////////////////////////////////////////
+// Insert your code between here and the previous comment block.  Do not alter //
+// any code in any other part of this file.                                    //
+/////////////////////////////////////////////////////////////////////////////////
+
+}
+
+let investmentAmount = prompt('How much is the proposed investment? ');
+let annualIncome = prompt('What if the annual income of the proposed investor? ');
+let assets = totalAssets();
+let debts = totalDebt();
+let investorScore = calculateInvestorRanking(investmentAmount, annualIncome, assets, debts);
+
+alert('The investor score is ' + investorScore);
+
+</script>
+</body>
+</html>
